@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>dopyo.js</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<script src="lib/dopyo.js"></script>
+	</head>
+	<body style="margin:0;padding:0;">
+
+		<div id="chart1" style="height: 400px;"></div>
+
+		<button id="bar">Bar Chart</button>
+		<button id="column">Column Chart</button>
+		<button id="line">Line Chart</button>
+		<button id="stacked-bar">Stacked Bar Chart</button>
+		<button id="pie">Pie Chart</button>
+
+		<script>
+
+			// Create Dopyo.js Object
+			let d = new Dopyo("chart-id", "Bar");
+
+			// Set labels
+			d.setLabels(["2013", "2014", "2015", "2016", "2017", "2018"]);
+
+			// Set legends and values
+			d.addLegend({"name": "Alpha", "values": [10, 20, 30, 40, 50, 60]});
+			d.addLegend({"name": "Bravo", "values": [65, 15, 25, 40, 60, 75]});
+			d.addLegend({"name": "Charlie", "values": [20, 45, 65, 45, 20, 70]});
+
+			// d.setAnimateShow(false);
+			// d.setAnimateDuration(1);
+			d.setPadding(75, 30, 10, 0); // TRBL
+			// d.setBackgroundColor("rgba(0, 50, 50, 1)");
+
+			// d.setValueOnChartShow(true);
+
+			d.setTitleText("Title for Chart");
+			// d.setTitleShow(false);
+			// d.setTitlePosition("center", 10);
+			// d.setTitleBackgroundColor("rgba(100, 100, 100, 0.5)");
+			// d.setTitleBorderColor("rgba(100, 100, 100, 1)");
+			// d.setTitleFontSize(20);
+			// d.setTitleFontFamily("monospace");
+			// d.setTitleFontWeight(100);
+			// d.setTitleFontColor("white");
+
+			// d.setAxisXShow(false);
+			// d.setAxisXColor("rgba(255, 200, 200, 1)");
+			// d.setAxisXWidth(0.5);
+			// d.setAxisXMinValue(-100);
+			// d.setAxisXMaxValue(100);
+
+			// d.setAxisYShow(false);
+			// d.setAxisYColor("rgba(255, 200, 200, 1)");
+			// d.setAxisYWidth(0.5);
+			// d.setAxisYMinValue(-100);
+			// d.setAxisYMaxValue(100);
+			// d.setAxisYStackedBarMinValue(3000);
+			// d.setAxisYStackedBarMaxValue(27500);
+
+			// d.setGridXShow(true);
+			// d.setGridXInterval(5000);
+			// d.setGridXLabelShow(true);
+
+			d.setGridYShow(true);
+
+			// d.setLabelShow(false);
+			// d.setLabelFontColor("rgba(255, 255, 255, 1)");
+			// d.setLabelFontFamily("sans-serif");
+			// d.setLabelFontSize(12);
+			// d.setLabelFontWeight(300);
+
+			// d.setLegendTableShow(false);
+			// d.setLegendTablePosition("center", 470);
+			// d.setLegendTableDirection("horizontal");
+			// d.setLegendTableDirection("vertical");
+			// d.setLegendTableBackgroundColor("rgba(100, 100, 100, 0.5)");
+			// d.setLegendTableBorderColor("rgba(100, 100, 100, 1)");
+			// d.setLegendTableFontColor("white");
+
+			// d.setTooltipShow(false);
+			// d.setTooltipBoxColor("rgba(200, 200, 240, 0.8)");
+			// d.setTooltipFontColor("rgba(100, 100, 100, 1)");
+
+			// d.setPointShow(false);
+			// d.setLineWidth(2);
+			// d.setLineStyle("straight");
+
+			// d.setPointShow(false);
+			// d.setPointRadius(3);
+			// d.setPointStrokeWidth(1);
+
+			// Inject chart into DOM object
+			let div = document.getElementById("chart1");
+			d.inject(div);
+
+			// Draw
+			d.draw();
+
+			document.getElementById("column").addEventListener("click", function() {
+				d.setType("Column");
+				d.draw();
+			});
+
+			document.getElementById("bar").addEventListener("click", function() {
+				d.setType("Bar");
+				d.draw();
+			});
+
+			document.getElementById("line").addEventListener("click", function() {
+				d.setType("Line");
+				d.draw();
+			});
+
+			document.getElementById("stacked-bar").addEventListener("click", function() {
+				d.setType("Stacked-Bar");
+				d.draw();
+			});
+
+			document.getElementById("pie").addEventListener("click", function() {
+				d.setType("Pie");
+				d.draw();
+			});
+
+		</script>
+
+	</body>
+</html>
