@@ -3,7 +3,7 @@ dopyo.js is simple JavaScript chart library based SVG.
 Easy to use, easy to modify.
 
 ## Exmaple
-- [Click link](http://park108-dopyo-js.s3-website.ap-northeast-2.amazonaws.com)
+- [Click link](https://park108.github.io/dopyo.js/)
 
 ## How to Use
 1. Import library in HTML
