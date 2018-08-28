@@ -48,19 +48,19 @@ Easy to use, easy to modify.
 	```
 
 ## Chart types
-1. Bar chart
+1. Bar chart  
 	![Bar chart exmaple](http://park108-dopyo-js.s3-website.ap-northeast-2.amazonaws.com/document/bar.png)
 
-2. Column chart
+2. Column chart  
 	![Column chart exmaple](http://park108-dopyo-js.s3-website.ap-northeast-2.amazonaws.com/document/column.png)
 
-3. Line chart
+3. Line chart  
 	![Line chart exmaple](http://park108-dopyo-js.s3-website.ap-northeast-2.amazonaws.com/document/line.png)
 
-4. Stacked-Bar chart
+4. Stacked-Bar chart  
 	![Stacked-Bar chart exmaple](http://park108-dopyo-js.s3-website.ap-northeast-2.amazonaws.com/document/stacked-bar.png)
 
-5. Pie chart
+5. Pie chart  
 	![Pie chart exmaple](http://park108-dopyo-js.s3-website.ap-northeast-2.amazonaws.com/document/pie.png)
 
 
